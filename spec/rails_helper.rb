@@ -1,5 +1,9 @@
+ENV["RAILS_ENV"] = 'test'
+
 require 'simplecov'
 SimpleCov.start 'rails' unless SimpleCov.running
+require File.expand_path('../../config/environment', __FILE__)
+Rails.application.eager_load!
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
