@@ -8,3 +8,9 @@
 - node version: 16.4.0
 - npm version: 7.18.1
 - yarn version: 1.22.17 
+
+## Test
+
+```bash
+bundle exec rspec
+```
