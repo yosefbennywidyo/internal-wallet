@@ -1,0 +1,35 @@
+<%= render 'shared/navbar' %>
+<div class="container mx-auto my-12 flex flex-col items-center justify-center">
+  <div class="p-10">
+    <h1 class="text-7xl my-8 lg:my-12 font-bold text-transparent
+      bg-clip-text bg-gradient-to-br text-transparent
+      bg-clip-text bg-gradient-to-br from-pink-500
+      to-blue-700 filter drop-shadow">Transactions</h1>
+    <table class="table-auto">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">Source</th>
+          <th class="px-4 py-2">Note</th>
+          <th class="px-4 py-2">Wallet Address</th>
+          <th class="px-4 py-2">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @transactionals.each do |transactional| %>
+          <tr>
+            <td class="border px-4 py-2"><%= transactional.source %></td>
+            <td class="border px-4 py-2"><%= transactional.note %></td>
+            <td class="border px-4 py-2"><%= transactional.to %></td>
+            <td class="border px-4 py-2"><%= transactional.amount %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <button title="Withdraw" class="fixed z-90 bottom-10 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300">&#128229;</button>
+  </div>
+  <div>
+    <button title="Transfer" class="fixed z-90 bottom-10 right-32 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300">&#128257;</button>
+  </div>
+</div>

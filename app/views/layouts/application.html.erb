@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InternalWallet</title>
+    <title>Internal Wallet</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,10 +12,20 @@
 
   <body>
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <div class="container">
+          <button class="close" data-dismiss="alert"><span>×</span></button>
+            <%= notice %>
+        </div>
+      </div>
     <% end %>
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <div class="container">
+          <button class="close" data-dismiss="alert"><span>×</span></button>
+            <%= alert %>
+        </div>
+      </div>
     <% end %>
     <%= yield %>
   </body>

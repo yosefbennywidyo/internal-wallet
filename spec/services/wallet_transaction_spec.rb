@@ -6,6 +6,14 @@ RSpec.describe "Homes", type: :service_object do
     @team = create(:user, :team)
   end
 
+  describe "WalletTransaction::Base.new" do
+    it "initialize params" do
+      expect(
+        WalletTransaction::Base.new.inspect
+      ).to include '@params={}'
+    end
+  end
+
   describe "WalletTransaction::Credit.call" do
     it "able to topup balance" do
       expect(
