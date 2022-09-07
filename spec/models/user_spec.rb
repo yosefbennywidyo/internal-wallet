@@ -46,16 +46,28 @@ RSpec.describe User, type: :model do
   end
 
   context "query User" do
-    it "able to get User only" do
+    it "able to get correct User length" do
       create(:user)
 
       expect(User.only.length).to eq 1
+    end
+
+    it "able to get correct Team length" do
+      create(:user, :team)
+
+      expect(User.team.length).to eq 1
     end
 
     it "able to get Team only" do
       create(:user, :team)
 
       expect(User.team.length).to eq 1
+    end
+
+    it "able to get Team only" do
+      create(:user)
+
+      expect(User.only.length).to eq 1
     end
   end
 end

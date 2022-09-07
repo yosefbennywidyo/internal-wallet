@@ -113,11 +113,12 @@ GEM
       railties (>= 5.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.1.5)
-      actionpack (>= 6.0.0)
-      railties (>= 6.0.0)
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -278,7 +279,7 @@ DEPENDENCIES
   debug
   devise
   factory_bot_rails
-  importmap-rails
+  hotwire-rails (~> 0.1.3)
   jbuilder
   jsbundling-rails
   pg (~> 1.1)

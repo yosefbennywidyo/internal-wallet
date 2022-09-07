@@ -1,0 +1,10 @@
+<%= render 'shared/navbar' %>
+<div class="container mx-auto my-12 flex flex-col items-center justify-center">
+  <div class="p-10">
+      <h1 class="font-bold text-4xl">New transactions</h1>
+
+      <%= render "form" %>
+
+      <%= link_to 'Back to home', home_index_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

@@ -56,6 +56,7 @@ gem "devise"
 # styling
 gem "cssbundling-rails"
 gem "tailwindcss-rails"
+gem "hotwire-rails", "~> 0.1.3"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

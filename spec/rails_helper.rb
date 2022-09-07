@@ -46,6 +46,13 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include Capybara::DSL
 
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :system
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Warden::Test::Helpers
+
   config.before(:each, type: :system, js: true) do
     driven_by :chrome_headless
 
